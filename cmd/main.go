@@ -51,9 +51,9 @@ func main() {
 
 	// Initialize pusher here
 	pusherClient := &pusher.Client{
-		AppID:   "1685805",
-		Key:     "3c7c673555b5ae173cc9",
-		Secret:  "69308a5824f5ebd64c1b",
+		AppID:   os.Getenv("PUSHER_APP_ID"),
+		Key:     os.Getenv("PUSHER_KEY"),
+		Secret:  os.Getenv("PUSHER_SECRET"),
 		Cluster: "ap3",
 		Secure:  true,
 	}
